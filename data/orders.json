@@ -1,0 +1,15 @@
+[
+  {
+    "id": "order-1782918887818",
+    "coffeeType": "Latte",
+    "size": "Medium",
+    "quantity": 1,
+    "location": "Test",
+    "email": "test@example.com",
+    "note": "test",
+    "payment": "cash",
+    "paymentReference": "",
+    "status": "pending",
+    "createdAt": "2026-07-01T15:14:47.819Z"
+  }
+]

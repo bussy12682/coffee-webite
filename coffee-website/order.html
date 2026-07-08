@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Coffee | Coffee House</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">☕Coffee</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button"><i class="uil uil-times"></i></button>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <button id="menu-open-button"><i class="uil uil-bars"></i></button>
+        </nav>
+    </header>
+
+    <main class="order-page">
+        <section class="order-hero reveal">
+            <div class="section-content">
+                <div class="order-hero-content">
+                    <div class="hero-badge">Freshly Brewed, Delivered Your Way</div>
+                    <h1>Order your favourite coffee in minutes.</h1>
+                    <p>Choose your drink, add your delivery address, and pay securely. We’ll confirm everything for you right away.</p>
+                    <div class="hero-highlights">
+                        <span>⚡ Fast delivery</span>
+                        <span>☕ Premium blends</span>
+                        <span>💳 Flexible payment</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-section reveal">
+            <div class="section-content order-grid">
+                <div class="order-card">
+                    <h2>Build Your Order</h2>
+                    <form id="order-form">
+                        <div class="order-field">
+                            <label for="coffee-type">Coffee Type</label>
+                            <select id="coffee-type" name="coffeeType" required>
+                                <option value="">Select your drink</option>
+                                <option value="Americano">Americano</option>
+                                <option value="Latte">Latte</option>
+                                <option value="Cappuccino">Cappuccino</option>
+                                <option value="Mocha">Mocha</option>
+                                <option value="Iced Latte">Iced Latte</option>
+                                <option value="Cold Brew">Cold Brew</option>
+                            </select>
+                        </div>
+
+                        <div class="order-field">
+                            <label for="size">Size</label>
+                            <select id="size" name="size" required>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                            </select>
+                        </div>
+
+                        <div class="order-field">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                        </div>
+
+                        <div class="order-field">
+                            <label for="location">Delivery Location</label>
+                            <input type="text" id="location" name="location" placeholder="Enter your address or area" required>
+                        </div>
+
+                        <div class="order-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="e.g. username12@gmail.com" required>
+                        </div>
+
+                        <div class="order-field">
+                            <label for="note">Special Instructions</label>
+                            <textarea id="note" name="note" rows="3" placeholder="Extra sugar, no ice, etc."></textarea>
+                        </div>
+
+                        <div class="order-field">
+                            <label>Payment Option</label>
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="cash" checked>
+                                    <span>Cash on delivery</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card">
+                                    <span>Pay with card</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="payment-reference" name="paymentReference" value="">
+
+                        <div class="order-actions">
+                            <button type="submit" class="button primary-button">Place Order</button>
+                            <button type="button" id="pay-now-button" class="button secondary-button">Pay Now</button>
+                        </div>
+                        <p id="order-status" class="order-status">Your order will be confirmed instantly.</p>
+                    </form>
+                </div>
+
+                <div id="confirmation-modal" class="confirmation-modal" aria-hidden="true">
+                    <div class="confirmation-dialog" role="dialog" aria-modal="true" aria-labelledby="confirmation-title">
+                        <h3 id="confirmation-title">Order Confirmed</h3>
+                        <p id="confirmation-message">Your order has been received. We will contact you shortly.</p>
+                        <button type="button" id="close-confirmation" class="button primary-button">Close</button>
+                    </div>
+                </div>
+
+                <aside class="order-summary-card">
+                    <h3>Order Summary</h3>
+                    <ul>
+                        <li>Fresh roasted coffee made to order</li>
+                        <li>Fast delivery to your preferred location</li>
+                        <li>Secure payment options available</li>
+                        <li>Support for custom notes and add-ons</li>
+                    </ul>
+                    <div class="summary-highlight">
+                        <strong>Need help?</strong>
+                        <p>Call or chat with us for a custom coffee pairing.</p>
+                        <a href="https://wa.me/1234567890" class="button secondary-button whatsapp-button" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <script src="sript.js"></script>
+</body>
+</html>
